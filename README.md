@@ -8,7 +8,7 @@ Código gerado no curso de R com Postgres com Prof. Jose Silva
 ## Códigos
 
 1. code_base.R: é código para introdução ao R.
-2. code_start.R: é o código inicial para puxar dados do STF. O código puxa os dados 
+2. code_start.R: é o código inicial para puxar dados do STF. Os dados são baixados no formato HTML e depois estruturados em tabelas.
 3. code_dplyr: é o código para guardar os arquivos baixados no code_start.R em alguma pasta sob determinado formato (xls, csv, json, etc)
 
 
