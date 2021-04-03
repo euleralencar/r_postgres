@@ -1,4 +1,5 @@
 # Usar GitHub
+# Pacote interessante para usar comando do Git no R
 
 library(usethis)
 
@@ -8,7 +9,7 @@ use_github()
 use_github_links()
 
 
-
+# Library STF foi desenvolvida pelo prof. Jose Jesus. Permite fazer o scrapy da página e buscar as principais informações do site.
 library(stf)
 
 
