@@ -1,21 +1,30 @@
+#' ###########################################
+#' Uso do pacote STF para buscar informações do site
+#'
+#' Primeiro iremos conectar com Github e depois
+#' iremos buscar as informações no site do STF
+#' ###########################################
+
 # Usar GitHub
 
 library(usethis)
 
 use_git(message ='Initial commit')
-use_github()
-
-use_github_links()
+#use_github()
 
 
+#use_github_links()
+
+# Uso da funcão STF
 
 library(stf)
 
+incidentes = 2635061:2635161
 
-stf_download_information("2635061", dir = "data-raw/informacoes")
-stf_download_parties("2635061","data-raw/partes")
-stf_download_details("2635061","data-raw/detalhes")
-stf_download_sheet("2635061", "data-raw/movimentacao")
+stf_download_information(incidentes, dir = "data-raw/informacoes")
+stf_download_parties(incidentes,"data-raw/partes")
+stf_download_details(incidentes,"data-raw/detalhes")
+stf_download_sheet(incidentes, "data-raw/movimentacao")
 
 
 informacoes <- read_stf_information(path = "data-raw/informacoes")

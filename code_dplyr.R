@@ -1,3 +1,10 @@
+#' ###########################################
+#' Uso do pacote STF para buscar informações do site
+#'
+#' Primeiro iremos conectar com Github e depois
+#' iremos buscar as informações no site do STF
+#' ###########################################
+
 library(tidyverse)
 library(writexl)
 library(readxl)
@@ -7,39 +14,29 @@ library(jsonlite)
 
 ## Salvar como csv
 write_csv(x = detalhes, file = "data/detalhes.csv")
-
 ## Ler csv
 detalhes <- read_csv(file = "data/detalhes.csv")
 
 ## Salvar em txt
 write_delim(informacoes,"data/informacoes.txt", delim = "\t")
-
 ## Ler txt
 informacoes <- read_delim(file = "data/informacoes.txt", delim = "\t")
 
-
 ## salvar em excel
 write_xlsx(detalhes,path = "data/detalhes.xlsx")
-
-
-git@github.com:euleralencar/r_postgres.git
+#git@github.com:euleralencar/r_postgres.git
 ## Ler excel
 detalhes <- read_excel("data/detalhes.xlsx")
 
-
 ## Salvar em json
 write_json(movimentacao,"data/movimentacao.json",pretty = TRUE)
-
-### Ler json
+## Ler json
 movimentacao <- read_json("data/movimentacao.json",simplifyDataFrame =T)
 
-
-### Salvar em rds
+## Salvar em rds
 saveRDS(partes,"data/partes.rds")
-
-### Ler rds
+## Ler rds
 partes <- readRDS("data/partes.rds")
-
 
 ## Salvar como RData
 save(detalhes,informacoes,movimentacao,partes, file = "data/bases.RData")

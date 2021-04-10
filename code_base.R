@@ -1,3 +1,12 @@
+#' ###########################################
+#' Introdução ao R
+#'
+#' Aula com finalidade de mostrar as principais funcionalidades
+#' do R para quem é iniciante
+#' ###########################################
+
+
+
 # https://github.com/euleralencar/r_postgres.git
 
 setwd("~/Documents/projetos/projetos_r/r_postgres")
@@ -93,3 +102,21 @@ num = as.integer(readline(prompt="Enter a number: "))
   else {
     print(paste(num,"is Odd"))
   }
+
+
+
+# Data frame e tibbles
+'%>%' <- magrittr::`%>%`
+
+df <- data.frame(col1 = c('a','b','c'),
+                 col2 =c(1,2,5)
+                 )
+
+
+df <- tidyr::tibble(col1 = c('a','b','c'),
+                 col2 =c(1,2,5)
+)
+
+
+df <- df %>%
+        tidyverse::add_row(col1="z", col2=4)
