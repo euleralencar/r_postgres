@@ -6,6 +6,7 @@
 #' ###########################################
 
 # Usar GitHub
+# Pacote interessante para usar comando do Git no R
 
 library(usethis)
 
@@ -15,8 +16,12 @@ use_git(message ='Initial commit')
 
 #use_github_links()
 
+<<<<<<< HEAD
 # Uso da funcão STF
 
+=======
+# Library STF foi desenvolvida pelo prof. Jose Jesus. Permite fazer o scrapy da página e buscar as principais informações do site.
+>>>>>>> 991b291003851b5fb95a2e50112f474011015e7d
 library(stf)
 
 incidentes = 2635061:2635161
