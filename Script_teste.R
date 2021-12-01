@@ -1,1 +1,1 @@
-Script teste
+#Script teste
